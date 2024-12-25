@@ -1,0 +1,136 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Main Question Container */
+#question-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    position: relative;
+}
+
+#question {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Button Styling */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    background-color: #3e8e41;
+}
+
+/* Result Styling */
+#result {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Restart Button Styling */
+#restart-button {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: fixed; /* Makes the button stay at the bottom */
+    bottom: 20px; /* Distance from the bottom of the screen */
+    left: 50%; /* Center the button horizontally */
+    transform: translateX(-50%);
+    transition: background-color 0.3s ease;
+}
+
+#restart-button:hover {
+    background-color: #e64a19;
+}
+
+#restart-button:active {
+    background-color: #d84315;
+}
+
+/* Ensure the body has padding to avoid overlap with the fixed button */
+body {
+    padding-bottom: 70px; /* Add space for the fixed restart button */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    #question-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    #question {
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    #restart-button-container {
+        bottom: -60px;
+    }
+}
+
+#header {
+    text-align: center;
+    position: absolute;
+    top: 20px; /* Adjust this value for the desired distance from the top */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* Ensures proper alignment for all screen sizes */
+}
+
+#header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+#header .subtitle {
+    font-size: 14px;
+    color: #555;
+    font-style: italic;
+}
